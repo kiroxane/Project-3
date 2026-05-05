@@ -1,0 +1,35 @@
+module.exports = {
+  content: [
+    "index.html",
+    "assets/maugallery.js",
+    "assets/scripts.js",
+  ],
+  css: ["assets/bootstrap/bootstrap.min.css"],
+  output: "assets/bootstrap/bootstrap.purged.css",
+  safelist: {
+    standard: [
+      "html",
+      "body",
+      "fade",
+      "show",
+      "active",
+      "active-tag",
+      "modal-open",
+      "modal-backdrop",
+      "img-fluid",
+      "tags-bar",
+      "lightboxImage",
+      "mg-prev",
+      "mg-next",
+      "gallery-items-row",
+      "item-column",
+    ],
+    deep: [
+      /^col(-\d|-sm|-md|-lg|-xl)/,
+      /^row$/,
+      /^carousel-(item|inner|indicators|control-(prev|next)(-icon)?|slide)?$/,
+      /^modal(-(dialog|content|body))?$/,
+      /^nav(-(item|link|pills))?$/,
+    ],
+  },
+};
